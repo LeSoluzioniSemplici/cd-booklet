@@ -14,6 +14,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #0052CC 0%, #0066FF 100%);
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -24,30 +25,17 @@
         }
         
         body::before {
-            content: "🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙 🤙";
+            content: "";
             position: fixed;
             top: 0;
             left: 0;
-            width: 200%;
-            height: 200%;
-            font-size: 80px;
-            line-height: 1.2;
-            word-wrap: break-word;
-            opacity: 1;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="37.8" height="37.8" viewBox="0 0 37.8 37.8"><text x="50%%" y="50%%" font-size="28" text-anchor="middle" dominant-baseline="middle" fill="rgba(255,255,255,0.3)">🤙</text></svg>');
+            background-attachment: fixed;
+            background-repeat: repeat;
             pointer-events: none;
-            z-index: -1;
-            white-space: pre-wrap;
-            color: rgba(255, 255, 255, 0.3);
-            animation: drift 20s linear infinite;
-        }
-        
-        @keyframes drift {
-            0% {
-                transform: translate(0, 0);
-            }
-            100% {
-                transform: translate(-50%, -50%);
-            }
+            z-index: 0;
         }
         
         .container {
@@ -222,10 +210,6 @@
             .download-btn {
                 padding: 16px 40px;
                 font-size: 16px;
-            }
-            
-            body::before {
-                font-size: 60px;
             }
         }
     </style>
