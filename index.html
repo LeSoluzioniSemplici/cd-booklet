@@ -44,16 +44,21 @@
         }
         
         .album-cover {
-            width: 120px;
-            height: 120px;
+            width: 200px;
+            height: 200px;
             margin: 0 auto 30px;
-            background: linear-gradient(135deg, #0052CC 0%, #0066FF 100%);
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
             box-shadow: 0 15px 35px rgba(0, 82, 204, 0.3);
+            overflow: hidden;
+        }
+        
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         h1 {
@@ -174,9 +179,8 @@
             }
             
             .album-cover {
-                width: 100px;
-                height: 100px;
-                font-size: 50px;
+                width: 160px;
+                height: 160px;
             }
             
             .release-info {
@@ -193,7 +197,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="album-cover">💿</div>
+        <div class="album-cover">
+            <img src="copertina disco shrinked.jpg" alt="Album Cover - California beats">
+        </div>
         
         <h1>Le soluzioni semplici</h1>
         <div class="album-title">California beats</div>
